@@ -1,102 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>TECH@ASTERISK</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="home.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-
-    <header id="header">
+    <div class="header">
         <img src="logo1.jpg" alt="Logo" class="logo">
-        <div id="app-name">TECH@ASTERISK</div>
-    </header>
-
-    <div id="marquee">
-        <marquee>🚀 Welcome to TECH@ASTERISK — Step towards your RISK-FREE career! 🌱</marquee>
+        <span class="brand">TECH@ASTERISK</span>
     </div>
 
-    <!-- Gap between marquee and dropdown -->
-    <div class="gap-marquee-menu"></div>
+    <marquee behavior="scroll" direction="left" class="marquee">
+    <span>🚀 Welcome to TECH@ASTERISK — Step towards your RISK-FREE career! 🌱</span>
+</marquee>
 
-    <nav class="menu-ribbon">
-        <ul class="menu-list">
-            <li><a href="whoarewe.html">WHO ARE WE</a></li>
-            <li><a href="whatwedo.html">WHAT WE DO</a></li>
-            <li><a href="whatwedid.html">WHAT WE DID</a></li>
-            <li><a href="aboutus.html">ABOUT US</a></li>
-        </ul>
-    </nav>
 
-    <div class="content-placeholder">
-    <div id="welcome-message">
-        <span id="username">Hey Techie Welcome!! </span><strong>Let's Go</strong> Define Your Career Path...
-    </div>
+    <div id="content_container">
+        <div id="form_container">
+            <div id="form_header_container">
+                <h2 id="form_header">STEP TOWARDS YOUR SUCCESSFUL CAREER</h2>
+            </div>
 
-    <div class="description-paragraph">
-        <p>
-            At TECH@ASTERISK, we believe in unlocking every individual's potential through technology, mentorship, and opportunity.
-            We are here to guide, support, and empower aspiring professionals in their journey toward a risk-free and fulfilling career.
-            Whether you are a student, job-seeker, or innovator, our ecosystem is tailored to bridge the gap between where you are and where you aspire to be.
-            We offer a wide range of services including career guidance, hands-on projects, soft-skills training, resume building, mock interviews, and direct industry interaction.
-            With a vision rooted in growth and a mission aligned with innovation, we make sure you are never alone in your pursuit of excellence.
-            Our team comprises tech leaders, educators, and professionals from across the globe, all united by a single goal — YOUR SUCCESS.
-            Join us as we redefine the way talent meets opportunity in this fast-paced digital world.
-            Let your curiosity lead you, and we will pave the way with clarity.
-            From skilling to scaling, from learning to leading — it all begins here.
-        </p>
-    </div>
-
-    <div class="vision-mission-container">
-        <div class="mission-box">
-            <h2>Our Mission</h2>
-            <p>
-                Our mission is to identify young talent and guide them on the right path with dedicated mentorship and support. 
-                We provide skill-based training, real-world opportunities, and a strong support system that stays with every individual 
-                until they achieve their dream job. We believe in empowering talent and making sure no one is left behind in their journey to success.
-            </p>
-        </div>
-        <div class="vision-box">
-            <h2>Our Vision</h2>
-            <p>
-                Our vision is to build a future where every passionate and skilled individual, regardless of background or access, 
-            is empowered to pursue a meaningful tech career. We aim to create a vibrant ecosystem that nurtures innovation, 
-            fosters growth, and bridges the gap between education and employment. By shaping a generation of confident professionals, 
-            we envision a world where talent meets opportunity, and dreams are transformed into impactful realities.
-            </p>
+            <div id="form_content_container">
+                <div id="form_content_inner_container">
+                    <input type="text" id="full_name" placeholder="Full Name">
+                    <input type="tel" id="Phone_Number" placeholder="Phone Number">
+                    <input type="email" id="email" placeholder="Email">
+                    <input type="password" id="password" placeholder="Password">
+                    <div id="button_container">
+                        <button onclick="login()">Login</button>
+                        <button onclick="register()">Register</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-    <div class="bottom-buttons">
-    <button id="signout" onclick="signOut()" aria-label="Sign Out">
-        <img src="logout.jpg" alt="Sign Out" />
-    </button>
-</div>
-
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="index.js"></script>
 
     <div class="social-links">
-        <a href="https://www.instagram.com/YOUR_USERNAME" target="_blank" aria-label="Instagram">
-            <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram" />
-        </a>
-        <a href="https://www.linkedin.com/in/YOUR_USERNAME" target="_blank" aria-label="LinkedIn">
-            <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" />
-        </a>
-        <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" aria-label="WhatsApp">
-            <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" />
-        </a>
-    </div>
+  <a href="https://www.instagram.com/YOUR_USERNAME" target="_blank" aria-label="Instagram">
+    <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram">
+  </a>
+  <a href="https://www.linkedin.com/in/YOUR_USERNAME" target="_blank" aria-label="LinkedIn">
+    <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn">
+  </a>
+  <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" aria-label="WhatsApp">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+  </a>
+</div>
 
-    <script src="home.js"></script>
-    <script>
-        function navigateToMainPage() {
-            window.location.href = 'servicespage.html';
-        }
-        function signOut() {
-            window.location.href = 'index.html';
-        }
-    </script>
+
 </body>
 </html>
