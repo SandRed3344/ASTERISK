@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>TECH@ASTERISK - What We Do</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="home.css" />
+  <style>
+    .slider-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin: 40px auto;
+    }
+
+    .slider-track {
+      display: flex;
+      width: calc(300px * 10); /* Adjust based on item count */
+      animation: scroll 9s linear infinite;
+    }
+
+    .slider-item {
+      width: 300px;
+      flex-shrink: 0;
+      margin-right: 20px;
+    }
+
+    .slider-item img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+
+.slider-item img:hover {
+  transform: scale(1.5);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .slider-item {
+        width: 250px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .slider-item {
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="header">
+    <img src="logo1.jpg" alt="Logo" class="logo">
+    <div id="app-name">TECH@ASTERISK</div>
+  </header>
+
+  <div id="marquee">
+    <marquee>🚀 Welcome to TECH@ASTERISK — Step towards your RISK-FREE career! 🌱</marquee>
+  </div>
+
+  <div class="gap-marquee-menu"></div>
+
+  <nav class="menu-ribbon">
+    <ul class="menu-list">
+      <li><a href="whoarewe.html">WHO ARE WE</a></li>
+      <li><a href="whatwedo.html">WHAT WE DO</a></li>
+      <li><a href="whatwedid.html">WHAT WE DID</a></li>
+      <li><a href="aboutus.html">ABOUT US</a></li>
+    </ul>
+  </nav>
+
+  <div style="text-align: center; font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 500; margin: 20px; color: #003366;">
+  Here’s a glimpse of our success stories — the scrolling visuals below showcase real offer letters from top companies where our candidates have secured placements.
+</div>
+
+
+  <!-- Slider Section Start -->
+  <div class="slider-container">
+    <div class="slider-track">
+      <div class="slider-item"><img src="img1.jpeg" alt="Work 1" /></div>
+      <div class="slider-item"><img src="img2.jpeg" alt="Work 2" /></div>
+      <div class="slider-item"><img src="img3.jpeg" alt="Work 3" /></div>
+      <div class="slider-item"><img src="img4.jpeg" alt="Work 4" /></div>
+      <div class="slider-item"><img src="img5.jpeg" alt="Work 5" /></div>
+      <div class="slider-item"><img src="img6.jpeg" alt="Work 6" /></div>
+      <div class="slider-item"><img src="img7.jpeg" alt="Work 7" /></div>
+      <div class="slider-item"><img src="img8.jpeg" alt="Work 8" /></div>
+      <div class="slider-item"><img src="img9.jpeg" alt="Work 9" /></div>
+      <div class="slider-item"><img src="img10.jpeg" alt="Work 10" /></div>
+      <div class="slider-item"><img src="img11.jpeg" alt="Work 11" /></div>
+      <div class="slider-item"><img src="img12.jpeg" alt="Work 12" /></div>
+      <div class="slider-item"><img src="img13.jpeg" alt="Work 12" /></div>
+      <!-- Repeat for infinite effect -->
+      <div class="slider-item"><img src="img1.jpeg" alt="Work 1" /></div>
+      <div class="slider-item"><img src="img2.jpeg" alt="Work 2" /></div>
+      <div class="slider-item"><img src="img3.jpeg" alt="Work 3" /></div>
+      <div class="slider-item"><img src="img4.jpeg" alt="Work 4" /></div>
+      <div class="slider-item"><img src="img5.jpeg" alt="Work 5" /></div>
+      <div class="slider-item"><img src="img6.jpeg" alt="Work 6" /></div>
+      <div class="slider-item"><img src="img7.jpeg" alt="Work 7" /></div>
+      <div class="slider-item"><img src="img8.jpeg" alt="Work 8" /></div>
+      <div class="slider-item"><img src="img9.jpeg" alt="Work 9" /></div>
+      <div class="slider-item"><img src="img10.jpeg" alt="Work 10" /></div>
+      <div class="slider-item"><img src="img11.jpeg" alt="Work 11" /></div>
+      <div class="slider-item"><img src="img12.jpeg" alt="Work 12" /></div>
+      <div class="slider-item"><img src="img13.jpeg" alt="Work 12" /></div>
+    </div>
+  </div>
+  <!-- Slider Section End -->
+
+  <div class="social-links">
+    <a href="https://www.instagram.com/YOUR_USERNAME" target="_blank" aria-label="Instagram">
+      <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram" />
+    </a>
+    <a href="https://www.linkedin.com/in/YOUR_USERNAME" target="_blank" aria-label="LinkedIn">
+      <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" />
+    </a>
+    <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" aria-label="WhatsApp">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" />
+    </a>
+  </div>
+
+  <button onclick="window.location.href='home.html'" style="
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    z-index: 1000;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  ">BACK</button>
+
+</body>
+</html>

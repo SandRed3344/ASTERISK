@@ -1,0 +1,186 @@
+@keyframes marquee {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Montserrat;
+}
+
+/* Header logo and name */
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.brand {
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 20px;
+    color: black;
+}
+
+/* Marquee styling */
+.marquee {
+    width: 100%;
+    background: black;
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee span {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+    background: linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+
+
+#content_container {
+    width: 30%;
+    height: auto;
+}
+
+#form_container {
+    width: 100%;
+    height: 110%; /* Increased from previous height */
+    background-color: #370617;
+    box-shadow: 0 0 50px -20px #000;
+    border-radius: 10px;
+    padding: 25px 0;
+}
+
+
+
+#form_header_container {
+    text-align: center;
+    padding: 10px 0;
+    background: #000;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF) 1;
+}
+
+#form_header {
+    font-size: 15px;
+    font-family: 'Bowlby One SC';
+    text-transform: uppercase;
+    background: linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#form_content_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+#form_content_inner_container {
+    width: 80%;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    border-bottom: 2px solid transparent;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-image: linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF) 1;
+}
+
+#button_container {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(80deg, #FFBE0B, #FB5607 50%, #FF006E 50%, #8338EC);
+    height: 35px;
+    margin-top: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#button_container button {
+    flex: 1;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+}
+
+.social-links {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.social-links img {
+  width: 42px;
+  height: 42px;
+  transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+.back-btn {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    z-index: 1000;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #0059b3;
+}

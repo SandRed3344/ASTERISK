@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    color: #333;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 80px; /* space for fixed social links */
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: whitesmoke;
+    position: relative;
+    z-index: 10;
+}
+
+/* Logo circular with background #FFBE0B and white text */
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50% / 50%;
+    display: block;
+    margin-right: 15px;
+}
+
+
+/* App name black, 24px, bold */
+#app-name {
+    font-size: 24px;
+    font-weight: 900;
+    color: black;
+}
+
+/* Marquee black bg with white text */
+#marquee {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Sticky dropdown menu ribbon */
+.menu-ribbon {
+    position: sticky;
+    top: 0;
+    background-color: #003366;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-list li {
+    margin: 0 20px;
+}
+
+.menu-list li a {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-list li a:hover,
+.menu-list li a:focus {
+    background-color: #0059b3;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Content placeholder */
+.content-placeholder {
+    min-height: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Welcome message style */
+#welcome-message {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+#signout {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#signout img {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    border-radius: 50%; /* Optional: Makes the image circular */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Optional */
+    transition: transform 0.2s ease;
+}
+
+#signout img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+
+/* Social links fixed at bottom center */
+.social-links {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: transparent;
+}
+
+.social-links a {
+    margin: 0 12px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Add spacing between marquee and menu */
+.gap-marquee-menu {
+    height: 10px; /* adjust gap size here */
+    background-color: white;
+}
+
+/* Move buttons to bottom-left */
+.bottom-buttons {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    z-index: 1000;
+}
+
+/* Remove margin from these buttons */
+.bottom-buttons #lets-go-button,
+.bottom-buttons #signout {
+    margin: 5px 0;
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+
+.description-paragraph {
+    margin: 20px auto;
+    width: 90%;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+    color: #333;
+}
+
+.vision-mission-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    width: 90%;
+    gap: 20px;
+}
+
+.mission-box, .vision-box {
+    flex: 1 1 45%;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.mission-box h2, .vision-box h2 {
+    color: #0a4d68;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.mission-box p, .vision-box p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
